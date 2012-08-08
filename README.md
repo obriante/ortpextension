@@ -4,7 +4,7 @@
 
 ### The ortpextension library implement RTP extension (Realtime Transport Protocol - RFC 3550)
 
-## Prequisites:
+## Prerequisites:
 
 * autotools and libtools (to compile the library)
 * oRTP version 0.17.0 or later
