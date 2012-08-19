@@ -66,19 +66,17 @@
  * @verbinclude ChangeLog
  */
 
-
 /**
  * \file ortpextension.h
  * \brief The Main Header to Import
  *
  * This Header File Contain All library Imports to work with RTP Extension.
-**/
+ **/
 
 #ifndef ORTPEXTENSION_H_
 #define ORTPEXTENSION_H_
 
 #include <ortpextension/rtp_extension.h>
 #include <ortpextension/rtpsession_extension.h>
-
 
 #endif /* ORTPEXTENSION_H_ */

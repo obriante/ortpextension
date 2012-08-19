@@ -30,6 +30,7 @@
 
 
 ## Test Files:
+(you may install ortpextension library first and run it with superuser privileges)
 
 * rtpextsend: to send a file stream with a static rtp extension for all packet
 * rtpextrecv: to show the receved rtp extension and store a rtp stream

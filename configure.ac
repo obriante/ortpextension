@@ -44,6 +44,6 @@ AC_CONFIG_FILES(
 ortpextension.pc
 Makefile
 example/Makefile
-ortpextension/Makefile
+src/Makefile
 include/ortpextension/Makefile)
 AC_OUTPUT

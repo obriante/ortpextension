@@ -1,7 +1,7 @@
 # DOXYGEN SUPPORT
 include $(top_srcdir)/aminclude.am
 
-SUBDIRS=ortpextension include/ortpextension example
+SUBDIRS=src include/ortpextension example
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = ortpextension.pc

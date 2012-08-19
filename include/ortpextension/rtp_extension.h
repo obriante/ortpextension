@@ -1,7 +1,7 @@
 /*
  * rtp_extension.h
  *
-* The ortpextension library implement RTP extension (Realtime Transport Protocol - RFC 3550)
+ * The ortpextension library implement RTP extension (Realtime Transport Protocol - RFC 3550)
  * Copyright (C) 2011  Orazio Briante orazio.briante@hotmail.it
  * Laboratory A.R.T.S. - University Mediterranea of Reggio Calabria - Faculty of Engineering
  *
@@ -25,43 +25,37 @@
  * \brief Implement RTP Extension
  *
  * This Header File Implement RTP Extension Structure
-**/
+ **/
 
 #ifndef RTP_EXTENSION_H_
 #define RTP_EXTENSION_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
 #include <stdint.h>
-#include <string.h>
-
 
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif
 
 /**
  * \brief Structure that modelize The Complete RTP Extension
  **/
-typedef struct Rtp_Header_Extension {
+typedef struct {
 	uint16_t type; /**< Extension Type */
-	uint32_t *extension ; /**< Extension Words Array */
+	uint32_t *extension; /**< Extension Words Array */
 	uint16_t length; /**< Number Length Of Extension Words */
-}RtpExtension_t; /** Rtp_Header_Extension */
+} RtpExtension_t; /** Rtp_Header_Extension */
 
-void *init_rtp_extension();
-void *init_rtp_extension_with_length(uint16_t);
-void uninit_rtp_extension(RtpExtension_t*);
+extern	void *init_rtp_extension();
+extern	void *init_rtp_extension_with_length(uint16_t);
+extern	void uninit_rtp_extension(RtpExtension_t *);
 
-void set_extension(RtpExtension_t *, uint16_t, uint32_t*, uint16_t);
-void* rtp_extension_to_uint32_t(RtpExtension_t*);
+extern	void set_extension(RtpExtension_t *, uint16_t, uint32_t*, uint16_t);
+extern	void* rtp_extension_to_uint32_t(RtpExtension_t *);
 
-void print_rtp_extension(RtpExtension_t*);
+extern	void print_rtp_extension(RtpExtension_t *);
 
 #ifdef __cplusplus
 }
 #endif
-
 
 #endif /*  RTP_EXTENSION_H_ */

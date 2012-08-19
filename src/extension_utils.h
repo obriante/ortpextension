@@ -23,13 +23,9 @@
 #ifndef EXTENSION_UTILS_H_
 #define EXTENSION_UTILS_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
 #include <stdint.h>
-#include <string.h>
 
-void* bytes_inverter_to_packet(uint32_t *, int);
-void *bytes_inverter_from_packet(uint32_t *, int);
+extern	void* bytes_inverter_to_packet(uint32_t *, int);
+extern	void *bytes_inverter_from_packet(uint32_t *, int);
 
 #endif /* EXTENSION_UTILS_H_ */

@@ -25,23 +25,19 @@
  * \brief Replace oRTP Function
  *
  * Replace The oRTP Function to Send and Receive RTP Packet With Header Extension
-**/
+ **/
 
 #ifndef RTP_SESSION_EXTENSION_H_
 #define RTP_SESSION_EXTENSION_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include <string.h>
-
+#include <ortpextension/rtp_extension.h>
 #include <ortp/ortp.h>
+#include <stdbool.h>
 
-#include <ortpextension/ortpextension.h>
+
 
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif
 
 /**
@@ -51,15 +47,15 @@ extern "C"{
  **/
 #define rtp_set_extbit(mp,value)		((rtp_header_t*)((mp)->b_rptr))->extbit=(value)
 
-void rtp_header_init_from_session_with_extension(rtp_header_t *, RtpSession *);
-int rtp_session_send_with_ts_with_extension (RtpSession *, const uint8_t *, int, uint32_t, RtpExtension_t*);
-mblk_t * rtp_session_create_packet_with_extension(RtpSession *, int, const uint8_t *, int, RtpExtension_t*);
-mblk_t * rtp_session_create_packet_with_data_with_extension(RtpSession *, uint8_t *, int, void (*freefn)(void*), RtpExtension_t*);
+extern	void rtp_header_init_from_session_with_extension(rtp_header_t *, RtpSession *);
+extern	int rtp_session_send_with_ts_with_extension(RtpSession *, const uint8_t *, int, uint32_t, RtpExtension_t *);
+extern	mblk_t * rtp_session_create_packet_with_extension(RtpSession *, int, const uint8_t *, int, RtpExtension_t*);
+extern	mblk_t * rtp_session_create_packet_with_data_with_extension(RtpSession *, uint8_t *, int, void (*freefn)(void*), RtpExtension_t *);
 
-int rtp_get_payload_with_extension(mblk_t *, unsigned char **, RtpExtension_t *);
-int rtp_session_recv_with_ts_with_extension(RtpSession *, uint8_t *, int, uint32_t, int *, RtpExtension_t *);
+extern	int rtp_get_payload_with_extension(mblk_t *, unsigned char **, RtpExtension_t *);
+extern	int rtp_session_recv_with_ts_with_extension(RtpSession *, uint8_t *, int, uint32_t, int *, RtpExtension_t *);
 
-void set_jitter_buffer(RtpSession *,int ,bool, int);
+extern	void set_jitter_buffer(RtpSession *, int, bool, int);
 
 #ifdef __cplusplus
 }
