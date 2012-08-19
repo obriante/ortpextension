@@ -30,36 +30,38 @@
 #include <netinet/in.h>
 
 void *
-bytes_inverter_to_packet (uint32_t * value, int length)
+bytes_inverter_to_packet(uint32_t * value, int length)
 {
 
   int i = 0;
   int iterator = length;
 
   uint32_t *inputvalue = (uint32_t *) value;
-  uint32_t *retvalue = (uint32_t *) malloc (length * sizeof (uint32_t));
+  uint32_t *retvalue = (uint32_t *) malloc(length * sizeof(uint32_t));
 
-  for (i = 0; i <= iterator; i++) {
-    retvalue[i] = ntohl (inputvalue[i]);
+  for (i = 0; i <= iterator; i++)
+    {
+      retvalue[i] = ntohl(inputvalue[i]);
 
-  }
+    }
 
   return retvalue;
 }
 
 void *
-bytes_inverter_from_packet (uint32_t * value, int length)
+bytes_inverter_from_packet(uint32_t * value, int length)
 {
   int i = 0;
   int iterator = length;
 
   uint32_t *inputvalue = (uint32_t *) value;
-  uint32_t *retvalue = (uint32_t *) malloc (length * sizeof (uint32_t));
+  uint32_t *retvalue = (uint32_t *) malloc(length * sizeof(uint32_t));
 
-  for (i = 0; i <= iterator; i++) {
-    retvalue[i] = htonl (inputvalue[i]);
+  for (i = 0; i <= iterator; i++)
+    {
+      retvalue[i] = htonl(inputvalue[i]);
 
-  }
+    }
 
   return retvalue;
 }

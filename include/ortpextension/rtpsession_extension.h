@@ -34,11 +34,9 @@
 #include <ortp/ortp.h>
 #include <stdbool.h>
 
-
-
 #ifdef __cplusplus
 extern "C"
-{
+  {
 #endif
 
 /**
@@ -48,30 +46,28 @@ extern "C"
  **/
 #define rtp_set_extbit(mp,value)		((rtp_header_t*)((mp)->b_rptr))->extbit=(value)
 
-  extern void rtp_header_init_from_session_with_extension (rtp_header_t *,
-							   RtpSession *);
-  extern int rtp_session_send_with_ts_with_extension (RtpSession *,
-						      const uint8_t *, int,
-						      uint32_t,
-						      RtpExtension_t *);
-  extern mblk_t *rtp_session_create_packet_with_extension (RtpSession *, int,
-							   const uint8_t *,
-							   int,
-							   RtpExtension_t *);
-  extern mblk_t
-    *rtp_session_create_packet_with_data_with_extension (RtpSession *,
-							 uint8_t *, int,
-							 void (*freefn) (void
-									 *),
-							 RtpExtension_t *);
+extern void
+rtp_header_init_from_session_with_extension(rtp_header_t *, RtpSession *);
+extern int
+rtp_session_send_with_ts_with_extension(RtpSession *, const uint8_t *, int,
+    uint32_t, RtpExtension_t *);
+extern mblk_t *
+rtp_session_create_packet_with_extension(RtpSession *, int, const uint8_t *,
+    int, RtpExtension_t *);
+extern mblk_t
+*
+rtp_session_create_packet_with_data_with_extension(RtpSession *, uint8_t *, int,
+    void
+    (*freefn)(void *), RtpExtension_t *);
 
-  extern int rtp_get_payload_with_extension (mblk_t *, unsigned char **,
-					     RtpExtension_t *);
-  extern int rtp_session_recv_with_ts_with_extension (RtpSession *, uint8_t *,
-						      int, uint32_t, int *,
-						      RtpExtension_t *);
+extern int
+rtp_get_payload_with_extension(mblk_t *, unsigned char **, RtpExtension_t *);
+extern int
+rtp_session_recv_with_ts_with_extension(RtpSession *, uint8_t *, int, uint32_t,
+    int *, RtpExtension_t *);
 
-  extern void set_jitter_buffer (RtpSession *, int, bool, int);
+extern void
+set_jitter_buffer(RtpSession *, int, bool, int);
 
 #ifdef __cplusplus
 }
