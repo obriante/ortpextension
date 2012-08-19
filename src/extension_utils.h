@@ -25,7 +25,7 @@
 
 #include <stdint.h>
 
-extern	void* bytes_inverter_to_packet(uint32_t *, int);
-extern	void *bytes_inverter_from_packet(uint32_t *, int);
+extern void *bytes_inverter_to_packet (uint32_t *, int);
+extern void *bytes_inverter_from_packet (uint32_t *, int);
 
 #endif /* EXTENSION_UTILS_H_ */
