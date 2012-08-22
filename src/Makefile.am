@@ -20,7 +20,12 @@ libortpextension_la_LDFLAGS = \
 
 # Compiler options. Here we are adding the include directory
 # to be searched for headers included in the source code.
-libortpextension_la_CPPFLAGS = \
+libortpextension_la_CFLAGS = \
 		-I$(top_srcdir)/include \
 		@ortp_CFLAGS@
+		
+libortpextension_la_CXXFLAGS = \
+		-I$(top_srcdir)/include \
+		@ortp_CFLAGS@
+		
 

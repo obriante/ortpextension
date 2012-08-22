@@ -25,5 +25,8 @@ rtpextsend_LDFLAGS = $(top_srcdir)/src/libortpextension.la
 rtpextrecv_LDFLAGS = $(top_srcdir)/src/libortpextension.la
 
 # Compiler options for a.out
+rtpextsend_CFLAGS = -I$(top_srcdir)/include
+rtpextrecv_CFLAGS = -I$(top_srcdir)/include
+
 rtpextsend_CPPFLAGS = -I$(top_srcdir)/include
 rtpextrecv_CPPFLAGS = -I$(top_srcdir)/include
