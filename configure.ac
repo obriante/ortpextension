@@ -3,8 +3,9 @@ dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.59)
 
 AC_INIT(ortpextension, 1.0)
+AC_PROG_CC
 AC_PROG_CXX
-m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
+m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([no])])
 
 dnl Initialize automake
 AM_INIT_AUTOMAKE([-Wall])
