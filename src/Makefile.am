@@ -24,7 +24,7 @@ libortpextension_la_CFLAGS = \
 		-I$(top_srcdir)/include \
 		@ortp_CFLAGS@
 		
-libortpextension_la_CXXFLAGS = \
+libortpextension_la_CPPFLAGS = \
 		-I$(top_srcdir)/include \
 		@ortp_CFLAGS@
 		

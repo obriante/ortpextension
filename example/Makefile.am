@@ -21,12 +21,18 @@ rtpextsend_SOURCES= rtpextsend.c
 rtpextrecv_SOURCES= rtpextrecv.c
 
 # Linker options for a.out
-rtpextsend_LDFLAGS = $(top_srcdir)/src/libortpextension.la
-rtpextrecv_LDFLAGS = $(top_srcdir)/src/libortpextension.la
+rtpextsend_LDFLAGS = $(top_srcdir)/src/libortpextension.la \
+		@ortp_LIBS@
+rtpextrecv_LDFLAGS = $(top_srcdir)/src/libortpextension.la\
+		@ortp_LIBS@
 
 # Compiler options for a.out
-rtpextsend_CFLAGS = -I$(top_srcdir)/include
-rtpextrecv_CFLAGS = -I$(top_srcdir)/include
+rtpextsend_CFLAGS = -I$(top_srcdir)/include\
+		@ortp_CFLAGS@
+rtpextrecv_CFLAGS = -I$(top_srcdir)/include\
+		@ortp_CFLAGS@
 
-rtpextsend_CPPFLAGS = -I$(top_srcdir)/include
-rtpextrecv_CPPFLAGS = -I$(top_srcdir)/include
+rtpextsend_CPPFLAGS = -I$(top_srcdir)/include\
+		@ortp_CFLAGS@
+rtpextrecv_CPPFLAGS = -I$(top_srcdir)/include\
+		@ortp_CFLAGS@
