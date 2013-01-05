@@ -7,5 +7,5 @@ Name: @PACKAGE_NAME@
 Description: Support for RTP Extension with oRTP 
 Version: @PACKAGE_VERSION@
 Requires: 
-Libs: -L${libdir} -lortpextension
-Cflags: -I${includedir}/ortpextension
+Libs: -L${libdir} -lortpextension -lortp -lpthread
+Cflags: -I${includedir}/ortpextension -D_REENTRANT -DORTP_INET6
