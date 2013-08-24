@@ -24,11 +24,11 @@ DX_PDF_FEATURE(ON)
 DX_PS_FEATURE(OFF)
 DX_INIT_DOXYGEN([$PACKAGE_NAME],[ortpextension.doxyfile],[doc])
 
-PKG_CHECK_MODULES(ortp, [ortp >= 0.17.0], , [
+PKG_CHECK_MODULES(ortp, [ortp >= 0.22], , [
 AC_MSG_RESULT(no)
 AC_MSG_ERROR([
 
-You must have ortp >= 0.17.0
+You must have ortp >= 0.22
 ])])
 
 AC_SUBST(libnotify_CFLAGS)

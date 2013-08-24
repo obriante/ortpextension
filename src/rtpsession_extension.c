@@ -21,7 +21,7 @@
  */
 
 #include <ortpextension/rtpsession_extension.h>
-#include "extension_utils.h"
+#include <ortpextension/extension_utils.h>
 
 #include <stdio.h>
 #include <stdlib.h>

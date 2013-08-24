@@ -5,5 +5,6 @@ ortpextension_includedir = $(includedir)/ortpextension
 ortpextension_include_HEADERS = \
 		ortpextension.h \
 		rtp_extension.h \
-		rtpsession_extension.h
+		rtpsession_extension.h \
+		extension_utils.h
 
